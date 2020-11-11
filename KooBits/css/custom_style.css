@@ -1,0 +1,312 @@
+﻿.info-image {
+    max-height: 70px;
+    margin-top: 20px;
+    margin-left: -10px;
+}
+
+.game-listing {
+    margin-top: -25px;
+}
+
+    .game-listing::before {
+        content: '' !important;
+    }
+
+
+.titles > div {
+    color: #c3c3c3;
+    font-size: 12px;
+    font-weight: 700;
+    text-align: center;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 30px;
+    min-width: 50px;
+}
+
+.game-listing > li {
+    border: none;
+    background-color: transparent;
+    margin-bottom: 0;
+    padding: 0;
+}
+
+    .game-listing > li > div.listrow {
+        background-color: #fff;
+        border: 0.5px solid #e8e8e8;
+        border-radius: 4px;
+        margin-bottom: 10px;
+        min-height: 50px;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: start;
+        -ms-flex-align: start;
+        align-items: flex-start;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        padding-left: 50px;
+        position: relative;
+        width: 100%;
+        z-index: 0
+    }
+
+    .game-listing > li > div .number {
+        color: #B7D8F4
+    }
+
+.score-img {
+    position: absolute;
+    z-index: 1;
+    margin-left: -30px;
+    margin-top: -3px;
+}
+
+.right-action{
+    min-width:180px !important;
+}
+
+.btn.btn-outline-pr {
+    color: #B6B6B6;
+    background-color: transparent;
+    background-image: none;
+    border-color: #B6B6B6;
+    padding: .25rem .5rem;
+    font-size: .875rem;
+    line-height: 1.5;
+    border-radius: .2rem
+}
+
+    .btn.btn-outline-pr.active {
+        background-color: #305DD4;
+        color: #fff;
+        border-color: #305DD4;
+        background-image: none;
+    }
+
+.btn-outline-pr:hover {
+    color: #fff;
+    background-color: #305DD4;
+    border-color: #305DD4;
+}
+
+.proficiency-class {
+    display: none;
+}
+
+.highscore-class {
+    display: block;
+}
+
+
+.national-avg {
+    color: #60B9EB;
+    font-family: 'vagrounded_bt';
+    font-size: 20px;
+}
+
+.your-proficiency {
+    margin-left: 5px;
+    color: #264CB3;
+}
+
+    .your-proficiency > div {
+        margin-left: 15px;
+    }
+
+    .your-proficiency > .percent {
+        font-size: 20px;
+        font-family: 'vagrounded_bt';
+    }
+
+.toggle-button {
+    cursor: pointer;
+}
+
+    .toggle-button#proficiency-button {
+        background-image: url('../img/newimg/togglebutton-negative.png');
+        width: 83px;
+        height: 38px;
+        display: inline-block;
+        background-position-x: left;
+    }
+
+    .toggle-button.active#proficiency-button {
+        background-image: url('../img/newimg/togglebutton.png');
+        width: 83px;
+        height: 36px;
+        display: inline-block;
+        background-position-x: left;
+    }
+
+    .toggle-button#highscore-button {
+        background-image: url('../img/newimg/togglebutton.png');
+        width: 83px;
+        height: 36px;
+        display: inline-block;
+        background-position-x: right;
+        margin-left: -4px;
+    }
+
+    .toggle-button.active#highscore-button {
+        background-image: url('../img/newimg/togglebutton-negative.png');
+        width: 83px;
+        height: 38px;
+        display: inline-block;
+        background-position-x: right;
+        margin-left: -4px;
+    }
+
+/*highlighteds*/
+
+
+.game-listing > li > div.yellow.highlighted {
+    background-color: #FFFCD7;
+    border-color: #F3E6AD;
+}
+
+li > div > div.number.yellow.highlighted-number {
+    color: #FEBD55;
+}
+
+
+.game-listing > li > div.red.highlighted {
+    background-color: #FFF1F1;
+    border-color: #F9DEDD;
+}
+
+
+li > div > div.number.red.highlighted-number {
+    color: #FF918F;
+}
+
+.game-listing > li > div.green.highlighted {
+    background-color: #ECFFEB;
+    border-color: #DEF3DE;
+}
+
+
+li > div > div.number.green.highlighted-number {
+    color: #8BD388;
+}
+
+.game-listing > li > div.blue2.highlighted {
+    background-color: #E8F5FE;
+    border-color: #E1EEF9;
+}
+
+
+li > div > div.number.blue2.highlighted-number {
+    color: #9BCDF6;
+}
+
+
+
+
+
+/*highlighteds*/
+
+
+
+
+
+/*header*/
+.header-blue {
+    background: #064AD1 url(../img/newimg/bg-header-2.png) no-repeat center bottom;
+    color: #fff;
+    padding-top: 0px;
+    padding-bottom: 5px;
+}
+
+    .header-blue .title {
+        font-size: 30px;
+        font-family: 'vagrounded_bt';
+        margin: 35px 0 0;
+        text-align: center;
+    }
+
+        .header-blue .title small {
+            font-size: 16px;
+            color: #16775d;
+        }
+
+    .header-blue .completed-skill .title {
+        font-size: 18px;
+        margin: 2px 0 5px;
+    }
+
+        .header-blue .completed-skill .title span {
+            font-size: 24px;
+            color: #ffd228;
+        }
+
+@media (max-width:991px) {
+    .header-blue .title {
+        font-size: 24px;
+        margin-top: 40px;
+    }
+}
+
+@media (max-width:767px) {
+    .header-blue {
+        text-align: center;
+    }
+
+        .header-blue .title {
+            margin-top: 0;
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+
+            .header-blue .title small {
+                display: block;
+            }
+}
+
+/*header*/
+
+
+
+/*navbar*/
+
+.navbar {
+    margin: 0;
+    padding: 0px 35px;
+}
+
+.sidenav::before {
+    border-left: 1px solid #133CCA;
+}
+
+.sidenav > li.active {
+    border-left-color: #133CCA;
+}
+
+    .sidenav > li.active > a, .sidenav > li > a:hover {
+        color: #133CCA;
+    }
+
+/*navbar*/
+
+
+
+/*stars*/
+
+.star {
+    background: url(../img/newimg/stars.png) no-repeat -32px 0;
+    width: 24px;
+    height: 30px;
+    display: inline-block;
+}
+
+    .star + .star {
+        margin-left: 3px;
+    }
+
+    .star.active {
+        background-position: -3px 0;
+    }
+
+/*stars*/
+
+

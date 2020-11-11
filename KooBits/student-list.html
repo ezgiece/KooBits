@@ -1,0 +1,662 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="css/custom_style.css" rel="stylesheet" />
+
+
+    <title>Student List</title>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="javascript:void(0)">
+            <img src="img/newimg/logo.png" />
+        </a>
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navb">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navb">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="javascript:void(0)">Dashboard</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="javascript:void(0)">Report</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="javascript:void(0)">Parent Register</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="javascript:void(0)">Leaderboard</a>
+                </li>
+
+            </ul>
+            <form class="form-inline my-2 my-lg-0">
+
+                <a class="mr-sm-3" href="javascript:void(0)">
+                    <img src="img/newimg/flag.png" />
+                </a>
+                <a class="mr-sm-3" href="javascript:void(0)">
+                    <img src="img/newimg/cog.png" />
+                </a>
+                <a class="mr-sm-3" href="javascript:void(0)">
+                    <img src="img/newimg/alert.png" />
+                </a>
+                <a class="mr-sm-3" href="javascript:void(0)">
+                    <img src="img/newimg/options.png" />
+                </a>
+                <button class="btn btn-light my-3 my-sm-0" type="button">Logout</button>
+            </form>
+        </div>
+    </nav>
+    <header class="header-blue">
+
+
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3">
+
+                    <div class="btn btn-blue btn-sm  my-3" style="background-color:#8294FF">Back</div>
+                </div>
+                <div class="col-md-8">
+                    <div class="completed-skill">
+                        <h1 class="title">You have mastered <span>23 skills</span>, carry on!</h1>
+                        <div class="completed-progress" style="background-color:#4166D8">
+                            <ul>
+                                <li class="completed">
+                                    <span class="circle"><span class="number">5</span></span>
+                                    <span class="progress-completed" style="width:50%;"></span>
+                                </li>
+                                <li class="completed">
+                                    <span class="circle"><span class="number">10</span></span>
+                                    <span class="progress-completed" style="width:50%;"></span>
+                                </li>
+                                <li class="incomplete">
+                                    <span class="circle"><span class="number">20</span></span>
+                                </li>
+                                <li><span class="circle"><span class="number">30</span></span></li>
+                                <li><span class="circle"><span class="number">45</span></span></li>
+                                <li><span class="circle"><span class="number">65</span></span></li>
+                                <li><span class="circle"><span class="number">90</span></span></li>
+                                <li><span class="circle"><span class="number">120</span></span></li>
+                                <li><span class="circle"><span class="number">256</span></span></li>
+                            </ul>
+                            <div class="total-skills">( total 256 skills )</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-1">
+                    <div class=" highscore-class">
+                        <div class="info-image">
+                            <img src="img/newimg/information.png" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </header>
+
+    <main>
+        <section class="content">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-3">
+                        <select style="margin-top:10px;" class="form-control">
+                            <option>Primary 1</option>
+                            <option>Primary 2</option>
+                            <option>Primary 3</option>
+                            <option>Primary 4</option>
+                            <option>Primary 5</option>
+                            <option>Primary 6</option>
+                        </select>
+
+                    </div>
+                    <div class="col-md-8">
+                        <div class="row">
+                            <div class="col-md-3"></div>
+                            <div class="col-md-5">
+                                <div class="row">
+                                    <img src="img/newimg/whole_numbers.png" />
+                                    <h2 class="section-title text-center" style="color:black ; margin-top: 25px;">Whole Numbers</h2>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+
+                                <span id="proficiency-button" class="toggle-button"></span>
+                                <span id="highscore-button" class="toggle-button active"></span>
+
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="link-buttons">
+                            <button class="btn btn-sm m-1 btn-outline-pr active"> All</button>      <button class="btn btn-sm m-1  btn-outline-pr "> Mechanical Sums</button>
+                            <button class="btn btn-sm m-1 btn-outline-pr "> High-ability </button>
+                            <button class="btn btn-sm m-1 btn-outline-pr "> Problem Sums</button>
+                            <button class="btn btn-sm m-1 btn-outline-pr "> Foundation</button>
+                        </div>
+
+                    </div>
+                    <div class="col-md-7">
+                        <div class="row titles">
+                            <div>Difficulty</div>
+                            <div class="highscore-class" style="margin-left: 300px;">
+                                High Score
+                                <a style="text-decoration:none;" href="javascript:void(0)">
+                                    <img src="img/newimg/question-circle.png" />
+                                </a>
+                            </div>
+                            <div class="proficiency-class" style="margin-left:330px;">National Avg</div>
+                            <div class="proficiency-class">
+                                Your Proficiency<a style="text-decoration:none;" href="javascript:void(0)">
+                                    <img src="img/newimg/question-circle.png" />
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-3">
+                        <ul class="nav flex-column sidenav">
+                            <li class="nav-item active">
+                                <a class="nav-link" href="#">Numbers up to 100 000</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Four Operations of Whole Numbers</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Factors &amp; Multiples</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Factors &amp; Multiples</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Decimals</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Time</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Area &amp; Perimeter</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Symmetry</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Squares &amp; Rectangles</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Area &amp; Perimeter</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-md-8">
+
+
+                        <ol class="game-listing">
+
+                            <li>
+                                <img class="highscore-class score-img" src="img/newimg/pencil-white.png" />
+                                <div class="listrow">
+                                    <div class="number">1</div>
+                                    <div class="difficulty">
+                                        <span class="chili active"></span>
+                                        <span class="chili"></span>
+                                        <span class="chili"></span>
+                                        <span class="chili"></span>
+                                        <span class="chili"></span>
+                                    </div>
+                                    <h3 class="name">Count by ten thousands</h3>
+
+                                    <div class="highscore-class progress">
+                                        <div class="progress-bar" role="progressbar" style="width:70%"></div>
+                                    </div>
+                                    <div class="proficiency-class">
+                                        <div class="national-avg"> 88%</div>
+                                    </div>
+
+                                    <div class="right-action">
+                                        <div class="highscore-class">
+                                            <a href="#"><span><img src="img/newimg/play.png" /></span></a>
+
+                                            <a href="#" class="btn btn-outline-grey">Practice</a>
+                                        </div>
+                                        <div class="proficiency-class ">
+                                            <div class="your-proficiency row">
+                                                <div class="percent">100%</div>
+                                                <div class="info">  4 out of 4</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+
+
+                            <li>
+
+                                <img class="highscore-class score-img" src="img/newimg/cap.png" />
+                                <div class="listrow yellow highlighted">
+                                    <div class="number yellow highlighted-number">2</div>
+                                    <div class="difficulty">
+                                        <span class="chili active"></span>
+                                        <span class="chili"></span>
+                                        <span class="chili"></span>
+                                        <span class="chili"></span>
+                                        <span class="chili"></span>
+                                    </div>
+                                    <h3 class="name">Count by hundred thousands</h3>
+                                    <div class="highscore-class ">
+
+                                        <span class="star active"></span>
+                                        <span class="star"></span>
+
+                                        <span class="star"></span>
+
+                                    </div>
+                                    <div class="proficiency-class">
+                                        <div class="national-avg"> 85%</div>
+                                    </div>
+
+                                    <div class="right-action">
+                                        <div class="highscore-class">
+                                            <a href="#"><span><img src="img/newimg/play.png" /></span></a>
+
+                                            <a href="#" class="btn btn-outline-grey">Try Again</a>
+                                        </div>
+                                        <div class="proficiency-class ">
+                                            <div class="your-proficiency row">
+                                                <div class="percent">100%</div>
+                                                <div class="info">   20 out of 20</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+
+
+                            <li>
+                                <img class="highscore-class score-img" src="img/newimg/cross.png" />
+                                <div class="listrow red highlighted">
+                                    <div class="number red highlighted-number">3</div>
+                                    <div class="difficulty">
+                                        <span class="chili active"></span>
+                                        <span class="chili"></span>
+                                        <span class="chili"></span>
+                                        <span class="chili"></span>
+                                        <span class="chili"></span>
+                                    </div>
+                                    <h3 class="name">Count by millions to 10 000 000</h3>
+                                    <div class="highscore-class ">
+
+                                        <span class="star"></span>
+                                        <span class="star"></span>
+
+                                        <span class="star"></span>
+
+                                    </div>
+                                    <div class="proficiency-class">
+                                        <div class="national-avg"> 65%</div>
+                                    </div>
+
+                                    <div class="right-action">
+                                        <div class="highscore-class">
+                                            <a href="#"><img src="img/newimg/play.png" /></a>
+
+                                            <a href="#" class="btn btn-outline-grey">Try Again</a>
+                                        </div>
+                                        <div class="proficiency-class ">
+                                            <div class="your-proficiency row">
+                                                <div class="percent">48%</div>
+                                                <div class="info">   5 out of 28</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li>
+                                <img class="highscore-class score-img" src="img/newimg/check.png" />
+                                <div class="listrow green highlighted">
+
+                                    <div class="number green highlighted-number">4</div>
+                                    <div class="difficulty">
+                                        <span class="chili active"></span>
+                                        <span class="chili active"></span>
+                                        <span class="chili"></span>
+                                        <span class="chili"></span>
+                                        <span class="chili"></span>
+                                    </div>
+                                    <h3 class="name">Write numbers in numerals and words</h3>
+                                    <div class="highscore-class ">
+
+                                        <span class="star active"></span>
+                                        <span class="star active"></span>
+
+                                        <span class="star"></span>
+
+                                    </div>
+                                    <div class="proficiency-class">
+                                        <div class="national-avg"> 81%</div>
+                                    </div>
+
+                                    <div class="right-action">
+                                        <div class="highscore-class">
+                                            <a href="#"><img src="img/newimg/play.png" /></a>
+
+                                            <a href="#" class="btn btn-outline-grey">Try Again</a>
+                                        </div>
+                                        <div class="proficiency-class ">
+                                            <div class="your-proficiency row">
+                                                <div class="percent">75%</div>
+                                                <div class="info">   17 out of 30</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li>
+                                <img class="highscore-class score-img" src="img/newimg/pencil-blue.png" />
+                                <div class="listrow blue2 highlighted">
+                                    <div class="number blue2 highlighted-number">5</div>
+                                    <div class="difficulty">
+                                        <span class="chili active"></span>
+                                        <span class="chili active"></span>
+                                        <span class="chili"></span>
+                                        <span class="chili"></span>
+                                        <span class="chili"></span>
+                                    </div>
+                                    <h3 class="name">Write numbers in numerals and words</h3>
+                                    <div class="highscore-class ">
+
+                                        <span class="star active"></span>
+                                        <span class="star"></span>
+
+                                        <span class="star"></span>
+
+                                    </div>
+                                    <div class="proficiency-class">
+                                        <div class="national-avg"> </div>
+                                    </div>
+
+                                    <div class="right-action">
+                                        <div class="highscore-class">
+                                            <a href="#"><img src="img/newimg/play.png" /></a>
+
+                                            <a href="#" class="btn btn-outline-grey">Try Again</a>
+                                        </div>
+                                        <div class="proficiency-class ">
+                                            <div class="your-proficiency row">
+                                                <div class="percent"></div>
+                                                <div class="info"> </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li>
+                                <img class="highscore-class score-img" src="img/newimg/pencil-white.png" />
+                                <div class="listrow">
+                                    <div class="number">6</div>
+                                    <div class="difficulty">
+                                        <span class="chili active"></span>
+                                        <span class="chili active"></span>
+                                        <span class="chili"></span>
+                                        <span class="chili"></span>
+                                        <span class="chili"></span>
+                                    </div>
+                                    <h3 class="name">Write numbers in numerals and words</h3>
+                                    <div class="highscore-class">
+
+
+                                    </div>
+                                    <div class="right-action">
+                                        <div class="highscore-class">
+
+
+                                            <a href="#" class="btn btn-outline-grey">Practice</a>
+                                        </div>
+                                        <div class="proficiency-class ">
+                                            <div class="your-proficiency row">
+                                                <div class="percent"></div>
+                                                <div class="info"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li>
+                                <img class="highscore-class score-img" src="img/newimg/check.png" />
+                                <div class="listrow green highlighted">
+                                    <div class="number green highlighted-number">7</div>
+                                    <div class="difficulty">
+                                        <span class="chili active"></span>
+                                        <span class="chili active"></span>
+                                        <span class="chili"></span>
+                                        <span class="chili"></span>
+                                        <span class="chili"></span>
+                                    </div>
+                                    <h3 class="name">Identify the place value and value of any digit</h3>
+                                    <div class="highscore-class ">
+
+                                        <span class="star active"></span>
+                                        <span class="star active"></span>
+
+                                        <span class="star"></span>
+
+                                    </div>
+                                    <div class="proficiency-class">
+                                        <div class="national-avg"> 74%</div>
+                                    </div>
+                                    <div class="right-action">
+                                        <div class="highscore-class">
+                                            <a href="#"><img src="img/newimg/play.png" /></a>
+
+                                            <a href="#" class="btn btn-outline-grey">Try Again</a>
+                                        </div>
+                                        <div class="proficiency-class ">
+                                            <div class="your-proficiency row">
+                                                <div class="percent">75%</div>
+                                                <div class="info">   17 out of 30</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li>
+                                <img class="highscore-class score-img" src="img/newimg/pencil-white.png" />
+                                <div class="listrow">
+                                    <div class="number">8</div>
+
+                                    <div class="difficulty">
+                                        <span class="chili active"></span>
+                                        <span class="chili active"></span>
+                                        <span class="chili"></span>
+                                        <span class="chili"></span>
+                                        <span class="chili"></span>
+                                    </div>
+                                    <h3 class="name">Write numbers to 10 million in expanded form</h3>
+                                    <div class="highscore-class">
+
+
+
+                                    </div>
+                                    <div class="right-action">
+                                        <div class="highscore-class">
+
+
+                                            <a href="#" class="btn btn-outline-grey">Practice</a>
+                                        </div>
+                                        <div class="proficiency-class ">
+                                            <div class="your-proficiency row">
+                                                <div class="percent"></div>
+                                                <div class="info"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li>
+                                <img class="highscore-class score-img" src="img/newimg/check.png" />
+                                <div class="listrow green highlighted">
+                                    <div class="number green highlighted-number">9</div>
+                                    <div class="difficulty">
+                                        <span class="chili active"></span>
+                                        <span class="chili active"></span>
+                                        <span class="chili active"></span>
+                                        <span class="chili"></span>
+                                        <span class="chili"></span>
+                                    </div>
+                                    <h3 class="name">Compare numbers to 1 000 000 using greater than and less than</h3>
+                                    <div class="highscore-class ">
+
+                                        <span class="star active"></span>
+                                        <span class="star active"></span>
+
+                                        <span class="star"></span>
+
+                                    </div>
+                                    <div class="proficiency-class">
+                                        <div class="national-avg"> 65%</div>
+                                    </div>
+
+                                    <div class="right-action">
+                                        <div class="highscore-class">
+                                            <a href="#"><img src="img/newimg/play.png" /></a>
+
+                                            <a href="#" class="btn btn-outline-grey">Try Again</a>
+                                        </div>
+                                        <div class="proficiency-class ">
+                                            <div class="your-proficiency row">
+                                                <div class="percent">75%</div>
+                                                <div class="info">   17 out of 30</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li>
+                                <img class="highscore-class score-img" src="img/newimg/pencil-white.png" />
+                                <div class="listrow">
+                                    <div class="number">10</div>
+                                    <div class="difficulty">
+                                        <span class="chili active"></span>
+                                        <span class="chili active"></span>
+                                        <span class="chili active"></span>
+                                        <span class="chili"></span>
+                                        <span class="chili"></span>
+                                    </div>
+                                    <h3 class="name">Compare numbers up to 10 000 000</h3>
+                                    <div class="highscore-class ">
+
+                                    </div>
+                                    <div class="proficiency-class">
+                                        <div class="national-avg"> </div>
+                                    </div>
+
+                                    <div class="right-action">
+                                        <div class="highscore-class">
+
+
+                                            <a href="#" class="btn btn-outline-grey">Practice</a>
+                                        </div>
+                                        <div class="proficiency-class ">
+                                            <div class="your-proficiency row">
+                                                <div class="percent"></div>
+                                                <div class="info"> </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li>
+                                <img class="highscore-class score-img" src="img/newimg/pencil-white.png" />
+                                <div class="listrow">
+                                    <div class="number">11</div>
+                                    <div class="difficulty">
+                                        <span class="chili active"></span>
+                                        <span class="chili active"></span>
+                                        <span class="chili active"></span>
+                                        <span class="chili"></span>
+                                        <span class="chili"></span>
+                                    </div>
+                                    <h3 class="name">Complete number patterns involving numbers to 10 000 000 </h3>
+                                    <div class="highscore-class ">
+
+                                    </div>
+                                    <div class="right-action">
+                                        <div class="highscore-class">
+
+
+                                            <a href="#" class="btn btn-outline-grey">Practice</a>
+                                        </div>
+                                        <div class="proficiency-class">
+                                            <div class="national-avg"> </div>
+                                        </div>
+
+                                        <div class="proficiency-class ">
+                                            <div class="your-proficiency row">
+                                                <div class="percent"></div>
+                                                <div class="info"> </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+
+        $(".toggle-button").click(function () {
+            var buttonid = $(this).prop("id");
+
+            if (buttonid == "proficiency-button") {
+
+                $(this).addClass("active");
+                $("#highscore-button").removeClass("active");
+                $(".highscore-class").css("display", "none");
+                $(".proficiency-class").css("display", "block");
+                $('li>div.listrow').removeClass("highlighted");
+                $('li>div  .number').removeClass("highlighted-number");
+            }
+            else {
+
+                $(this).addClass("active");
+                $("#proficiency-button").removeClass("active");
+                $(".highscore-class").css("display", "block");
+                $(".proficiency-class").css("display", "none");
+                $('li>div.listrow').addClass("highlighted");
+                $('li>div  .number').addClass("highlighted-number");
+            }
+
+        });
+    </script>
+</body>
+</html>
